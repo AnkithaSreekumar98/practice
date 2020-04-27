@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int i,j ,values[100],limit,temp;
+    printf("enter the limit\n");
+    scanf("%d",&limit);
+    printf("enter the values");
+    for(i=0;i<=limit;i++)
+    {
+        scanf("%d",&values[i]);
+    }
+    for(i=0;i<limit-1;i++)
+    {
+        for(j=i+1;j<limit;j++)
+            if(values[i]>values[j])
+            temp=values[j];
+        values[i]=values[j];
+        values[j]=temp;
+    }
+    printf("the sorted array is");
+    for(i=0;i<=limit;i++)
+        printf("%d\t",values[i]);
+}
